@@ -24,12 +24,12 @@ void printArray(int numbers[], int size) {
 
 // Function to perform insertion sort on an array
 void insertionSort(int unsortedArr[], int size) {
-    for (int i = 0; i < size; i++){
+    for (int i = 1; i < size; i++){
         int currentVal = unsortedArr[i];
         int j = i - 1;
         
         while (j >= 0 && unsortedArr[j] > currentVal){
-            unsortedArr[i+1] = unsortedArr[i];
+            unsortedArr[j+1] = unsortedArr[j];
             j--;
         }
         unsortedArr[j + 1] = currentVal;

@@ -19,7 +19,9 @@ public class InsertionSort {
         printArray(numbers);
 
         //do insertion sort
-        insertionSort(numbers);                  
+        insertionSort(numbers);
+        // int[] nums ={1,3,5,7,4};
+        // insertionSort231(nums);                  
 
         System.out.println("After : ");
         printArray(numbers);
@@ -55,5 +57,26 @@ public class InsertionSort {
             // now we have to increased the value of j
             unsortedArray[j+1] = currentVal;
         }
-    }
+    }    
+    
+    // private static void insertionSort231(int[] unsortedArray){
+    //     for (int i = 1; i < unsortedArray.length; i++){
+    //         int currentVal = unsortedArray[i];
+
+    //         for (int j=i-1; j>=0; j--){
+    //             if(unsortedArray[j] > currentVal){
+    //                 unsortedArray[j + 1] = unsortedArray[j];
+    //                 printArray(unsortedArray);
+    //             }
+    //             else if(unsortedArray[j] < currentVal){
+    //                 unsortedArray[j + 1] = currentVal;
+    //                 printArray(unsortedArray);
+    //                 break;
+    //             }
+    //             else{
+    //                 continue;
+    //             }
+    //         }
+    //     }
+    // }
 }

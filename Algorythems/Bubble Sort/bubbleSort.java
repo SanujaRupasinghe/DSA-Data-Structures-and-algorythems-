@@ -14,6 +14,7 @@ public class bubbleSort {
         for (int i = 0; i < size; i++) {
             numbers[i] = sc.nextInt();
         }
+        sc.close();
         System.out.println("Before sorting: ");
         printArray(numbers, size);
         bubbleSort3(numbers, size);                          //choose 1 or 2 or 3 sorting algorithm

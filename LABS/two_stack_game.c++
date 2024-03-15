@@ -1,6 +1,7 @@
 int twoStacks(int maxSum, vector<int> a, vector<int> b) {
     int sum = 0;
     int count = 0;
+    // i is for run through array a and j is for array b
     int i = 0;
     int j = 0;
 
@@ -11,17 +12,17 @@ int twoStacks(int maxSum, vector<int> a, vector<int> b) {
     }
     count = i;
 
-    //this part of the code is to check the sum of the elements in the second array
+    //this code is to check the sum of the elements in the second array
     while (j < b.size()) {
         sum += b[j];
         j++;
 
-        //this part of the code is to check if the sum is greater than the maxSum
+        //this code is to check if the sum is greater than the maxSum
         while (sum > maxSum && i > 0) {
             i--;
             sum -= a[i];
         }
-        //this part of the code is to check if the sum is less than the maxSum
+        //this code is to check if the sum is less than the maxSum
         if (sum <= maxSum && i + j > count) {
             count = i + j;
         }
